@@ -27,13 +27,18 @@ This repository provides a premium, best-practice development environment for Od
    cd config-odoo18-with-docker
    ```
 
-2. **Setup Environment:**
+2. **Clone Odoo 18 source code:**
+   ```bash
+   git clone --depth 1 --branch 18.0 https://github.com/odoo/odoo.git src
+   ```
+
+3. **Setup Environment:**
    ```bash
    cp .env.example .env
    # Edit .env if you need custom passwords
    ```
 
-3. **Launch Odoo:**
+4. **Launch Odoo:**
    ```bash
    make up
    ```
