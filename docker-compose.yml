@@ -23,6 +23,7 @@ services:
     volumes:
       - ./src:/opt/odoo/src:ro
       - ./custom_addons:/mnt/extra-addons
+      - ./enterprise:/mnt/enterprise
       - ./config:/etc/odoo
       - ./data:/var/lib/odoo
     env_file:

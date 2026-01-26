@@ -1,4 +1,4 @@
-FROM ubuntu:24.04
+FROM ubuntu:22.04
 
 # Avoid prompts during installation
 ENV DEBIAN_FRONTEND=noninteractive
@@ -20,7 +20,7 @@ RUN useradd -m -U -r -d /opt/odoo -s /bin/bash odoo
 
 # Optimization: Install Python requirements separately for better caching
 COPY ./src/requirements.txt /tmp/requirements.txt
-RUN pip3 install --no-cache-dir --break-system-packages -r /tmp/requirements.txt
+RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
 
 # Set ODOO_RC environment variable
 ENV ODOO_RC /etc/odoo/odoo.conf
